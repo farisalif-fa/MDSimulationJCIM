@@ -1,0 +1,7 @@
+#minimize 3
+&cntrl
+imin=1,maxcyc=1000,ncyc=0,
+cut=9.0,ntb=1,
+ntc=1,ntf=1,
+ntpr=100,
+/
