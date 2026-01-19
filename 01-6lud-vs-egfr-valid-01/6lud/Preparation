@@ -1,0 +1,191 @@
+#Preparasi 6LUD Protein
+
+pdb4amber -i 6lud-protein.pdb -o 6lud-amber.pdb --nohyd
+
+tleap
+source leaprc.protein.ff14SB
+x = loadpdb 6lud-amber.pdb
+savepdb x 6lud-fix.pdb
+quit
+
+tleap
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+x = loadpdb 6lud-fix.pdb
+check x
+charge x
+addions x Na+ 0
+charge x
+solvatebox x TIP3PBOX 10.0
+check x
+saveamberparm x solvated.prmtop solvated.inpcrd
+savepdb x solvated.pdb
+quit
+
+#Preparasi Model 2
+
+pdb4amber -i model_02_refine.pdb -o model_02-amber.pdb --nohyd
+
+tleap
+source leaprc.protein.ff14SB
+x = loadpdb model_02-amber.pdb
+savepdb x model_02-fix.pdb
+quit
+
+tleap
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+x = loadpdb model_02-fix.pdb
+check x
+charge x
+addions x Na+ 0
+charge x
+solvatebox x TIP3PBOX 10.0
+check x
+saveamberparm x solvated2.prmtop solvated2.inpcrd
+savepdb x solvated2.pdb
+quit
+
+#Preparasi Model 3
+
+pdb4amber -i model_03_refine.pdb -o model_03-amber.pdb --nohyd
+
+tleap
+source leaprc.protein.ff14SB
+x = loadpdb model_03-amber.pdb
+savepdb x model_03-fix.pdb
+quit
+
+tleap
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+x = loadpdb model_03-fix.pdb
+check x
+charge x
+addions x Na+ 0
+charge x
+solvatebox x TIP3PBOX 10.0
+check x
+saveamberparm x solvated3.prmtop solvated3.inpcrd
+savepdb x solvated3.pdb
+quit
+
+#Preparasi Model 4
+
+pdb4amber -i model_04_refine.pdb -o model_04-amber.pdb --nohyd
+
+tleap
+source leaprc.protein.ff14SB
+x = loadpdb model_04-amber.pdb
+savepdb x model_04-fix.pdb
+quit
+
+tleap
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+x = loadpdb model_04-fix.pdb
+check x
+charge x
+addions x Na+ 0
+charge x
+solvatebox x TIP3PBOX 10.0
+check x
+saveamberparm x solvated4.prmtop solvated4.inpcrd
+savepdb x solvated4.pdb
+quit
+
+#Preparasi Model 5
+
+pdb4amber -i model_05_refine.pdb -o model_05-amber.pdb --nohyd
+
+tleap
+source leaprc.protein.ff14SB
+x = loadpdb model_05-amber.pdb
+savepdb x model_05-fix.pdb
+quit
+
+tleap
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+x = loadpdb model_05-fix.pdb
+check x
+charge x
+addions x Na+ 0
+charge x
+solvatebox x TIP3PBOX 10.0
+check x
+saveamberparm x solvated5.prmtop solvated5.inpcrd
+savepdb x solvated5.pdb
+quit
+
+#Preparasi Model 6
+
+pdb4amber -i model_06_refine.pdb -o model_06-amber.pdb --nohyd
+
+tleap
+source leaprc.protein.ff14SB
+x = loadpdb model_06-amber.pdb
+savepdb x model_06-fix.pdb
+quit
+
+tleap
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+x = loadpdb model_06-fix.pdb
+check x
+charge x
+addions x Na+ 0
+charge x
+solvatebox x TIP3PBOX 10.0
+check x
+saveamberparm x solvated6.prmtop solvated6.inpcrd
+savepdb x solvated6.pdb
+quit
+
+#Preparasi Model 7
+
+pdb4amber -i model_07_refine.pdb -o model_07-amber.pdb --nohyd
+
+tleap
+source leaprc.protein.ff14SB
+x = loadpdb model_07-amber.pdb
+savepdb x model_07-fix.pdb
+quit
+
+tleap
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+x = loadpdb model_07-fix.pdb
+check x
+charge x
+addions x Na+ 0
+charge x
+solvatebox x TIP3PBOX 10.0
+check x
+saveamberparm x solvated7.prmtop solvated7.inpcrd
+savepdb x solvated7.pdb
+quit
+
+#Preparasi Model 8
+
+pdb4amber -i model_08_refine.pdb -o model_08-amber.pdb --nohyd
+
+tleap
+source leaprc.protein.ff14SB
+x = loadpdb model_08-amber.pdb
+savepdb x model_08-fix.pdb
+quit
+
+tleap
+source leaprc.protein.ff14SB
+source leaprc.water.tip3p
+x = loadpdb model_08-fix.pdb
+check x
+charge x
+addions x Na+ 0
+charge x
+solvatebox x TIP3PBOX 10.0
+check x
+saveamberparm x solvated8.prmtop solvated8.inpcrd
+savepdb x solvated8.pdb
+quit

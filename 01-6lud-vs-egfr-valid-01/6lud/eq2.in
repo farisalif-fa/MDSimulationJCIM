@@ -1,0 +1,7 @@
+#1 step is 1 fs so total step is 10 ps
+#snapshot is taken every 100 step or 0.1 ps so total 100 snapshots
+&cntrl
+imin=0, ntx=5, irest=1, ntpr=100, ntwr=100, ntwx=100, nstlim=10000, dt=0.001,
+ntt=3, gamma_ln=1, temp0=310, tempi=310, ntb=2, cut=9, ntf=1, ntp=1,
+ntr=1, restraintmask=':1-310@CA,C,N', restraint_wt=3,
+/

@@ -1,0 +1,8 @@
+#minimize 2 to remove potential clashes among residues' side-chain
+&cntrl
+imin=1,maxcyc=2000,ncyc=1000,
+cut=9.0,ntb=1,
+ntc=2,ntf=2,
+ntpr=100,
+ntr=1, restraintmask=':1-322@CA,C,O,N,H', restraint_wt=500,
+/
